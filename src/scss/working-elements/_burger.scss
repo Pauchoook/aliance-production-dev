@@ -1,0 +1,165 @@
+.burger {
+   display: none;
+   @media (max-width: 992px) {
+      display: block;
+   }
+   &__btn {
+      width: 80px;
+      height: 69px;
+      padding: 22px 28px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-right: 0.7px solid $stroke;
+      &.active {
+         .burger__btn-line {
+            margin: 0;
+            background-color: $txt !important;
+            &--top {
+               transform: rotate(45deg) translateY(-1px);
+            }
+            &--center {
+               opacity: 0;
+            }
+            &--bottom {
+               margin-top: -3px;
+               transform: rotate(-45deg) translateY(1px);
+            }
+         }
+      }
+   }
+   &__btn-line {
+      width: 20px;
+      height: 1px;
+      background-color: $txt;
+      transition: transform .2s ease-out, opacity .2s ease, background .2s ease;
+      &--center {
+         width: 15px;
+      }
+      &:not(:first-child) {
+         margin-top: 5px;
+      }
+   }
+
+   &__menu {
+      padding: 30px 0px 15px 0px;
+      position: absolute;
+      height: calc(100vh - 70px);
+      top: 70px;
+      left: 0;
+      right: 0;
+      background-color: $white;
+      overflow-y: scroll;
+      z-index: 1000;
+      transform: translateX(-100vw);
+      transition: transform .4s ease;
+      &::-webkit-scrollbar {
+         width: 0;
+      }
+      &.open {
+         transform: translateX(0);
+      }
+   }
+   &__list {
+      padding: 0px 0px 30px 15px;
+      border-bottom: 1px solid $sep;
+   }
+   &__item {
+      display: block;
+      &:not(:last-child) {
+         margin-bottom: 30px;
+      }
+   }
+   &__element {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 22px;
+      color: $txt !important;
+      transition: color .2s ease;
+      &:hover {
+         color: $main !important;
+      }
+   }
+   &__sublist {
+      padding-left: 20px;
+   }
+   &__subitem {
+      &:first-child {
+         margin-top: 30px;
+      }
+      &:not(:last-child) {
+         margin-bottom: 10px;
+      }
+   }
+   &__subelement {
+      font-size: 14px;
+      line-height: 22px;
+      color: $txt2 !important;
+      transition: color .2s ease;
+      &:hover {
+         color: $main;
+      }
+   }
+   &__contacts-info {
+      padding: 30px 0px 0px 15px;
+   }
+   &__telephone-number {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 32px;
+      color: $txt !important;
+      transition: color .2s ease;
+      &:hover {
+         color: $main !important;
+      }
+   }
+   &__contacts-list {
+      margin-top: 20px;
+   }
+   &__contacts-item {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      line-height: 22px;
+      color: $txt !important;
+      a {
+         color: $txt !important;
+         transition: color .2s ease;
+      }
+      &:hover {
+         a {
+            color: $main !important;
+         }
+      }
+      &:not(:last-child) {
+         margin-bottom: 10px;
+      }
+   }
+   &__contacts-icon {
+      width: 24px;
+      height: 24px;
+      fill: $main;
+      margin-right: 15px;
+   }
+   &__soc-list {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+   }
+   &__soc-item {
+      &:not(:last-child) {
+         margin-right: 15px;
+      }
+   }
+   &__soc-element {
+      display: block;
+      width: 24px;
+      height: 24px;
+   }
+   &__soc-icon {
+      width: 100%;
+      height: 100%;
+      fill: $main;
+   }
+}

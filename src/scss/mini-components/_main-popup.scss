@@ -1,0 +1,24 @@
+.main-popup {
+   &__window {
+      max-width: 600px;
+      @media (max-width: 660px) {
+         max-width: calc(100% - 40px);
+      }
+   }
+   &__img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      margin-bottom: 20px;
+   }
+   &__content {
+      @include content($txt);
+      margin-bottom: 20px;
+   }
+   &__btn {
+      padding: 20px 60px;
+      @media (max-width: 576px) {
+         width: 100%;
+      }
+   }
+}

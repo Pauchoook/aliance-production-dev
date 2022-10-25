@@ -1,0 +1,27 @@
+.share {
+   display: flex;
+   &__content {
+      @include content($txt2);
+      font-weight: 600;
+      margin-bottom: 20px;
+   }
+   &__item {
+      @include flex-center;
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      border: 1px solid $sep;
+      transition: border-color .2s ease;
+      &:hover {
+         border-color: $main;
+      }
+      &:not(:last-child) {
+         margin-right: 10px;
+      }
+   }
+   &__icon {
+      width: 24px;
+      height: 24px;
+      fill: $main;
+   }
+}

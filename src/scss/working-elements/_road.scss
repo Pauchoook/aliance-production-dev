@@ -1,0 +1,32 @@
+.road {
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   &__item-line {
+      margin: 0 10px;
+      color: $txt2;
+      font-size: 14px;
+      line-height: 22px;
+      @media (max-width: 768px) {
+         font-size: 12px;
+         line-height: 19px;
+      }
+   }
+   &__element {
+      cursor: pointer;
+      color: $txt2;
+      font-size: 14px;
+      line-height: 22px;
+      &.active {
+         color: $txt;
+      }
+      transition: color .2s ease;
+      &:hover {
+         color: $main;
+      }
+      @media (max-width: 768px) {
+         font-size: 12px;
+         line-height: 19px;
+      }
+   }
+}

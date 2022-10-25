@@ -1,0 +1,54 @@
+// base
+@import 'base/fonts';
+@import 'base/vars';
+@import 'base/templates';
+@import 'base/settings';
+@import 'base/swiper';
+
+// working-elements
+@import 'working-elements/_buttons';
+@import 'working-elements/_burger';
+@import 'working-elements/_tooltip';
+@import 'working-elements/_titles';
+@import 'working-elements/_links';
+@import 'working-elements/_arrows-slider';
+@import 'working-elements/_form';
+@import 'working-elements/_spollers';
+@import 'working-elements/_road';
+@import 'working-elements/_facts-slider';
+@import 'working-elements/_aerosol-products-list';
+@import 'working-elements/_popup';
+@import 'working-elements/_preloader';
+@import 'working-elements/_share';
+
+// components
+@import 'components/_header';
+
+@import 'components/_hero';
+@import 'components/_sheme-work';
+@import 'components/_contract-production';
+@import 'components/_own-trademarks';
+@import 'components/_relationship';
+@import 'components/_aerosol-products';
+@import 'components/_blog-expert';
+@import 'components/_cooperation';
+@import 'components/_hero-page';
+@import 'components/_production-chemical';
+@import 'components/_our-production';
+@import 'components/_research-center';
+@import 'components/_mission';
+@import 'components/_manufacture-avtohim';
+@import 'components/_views-avtohim';
+@import 'components/_gen-distributor';
+@import 'components/_blog-posts';
+@import 'components/_blog-more-content';
+@import 'components/_contacts';
+@import 'components/_politics';
+@import 'components/_error';
+
+@import 'components/_footer';
+
+// mini-components
+@import 'mini-components/_consultation';
+@import 'mini-components/_card-blog';
+@import 'mini-components/_main-popup';

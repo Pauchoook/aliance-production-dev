@@ -1,0 +1,101 @@
+.sheme-work {
+   padding-bottom: 150px;
+   overflow: hidden;
+   @media (max-width: 768px) {
+      padding-bottom: 100px;
+   }
+   &__title {
+      margin-bottom: 50px;
+      @media (max-width: 992px) {
+         margin-bottom: 30px;
+      }
+   }
+   &__slider {
+      @media (max-width: 1200px) {
+         overflow: visible;
+      }
+   }
+   &__body {
+      max-width: 1410px;
+   }
+   &__item {
+      flex: 0 1 25%;
+      &:not(:last-child) {
+         margin-right: 30px;
+      }
+      @media (max-width: 1200px) {
+         flex: 1 0 31%;
+      }
+      @media (max-width: 992px) {
+         flex-basis: 300px;
+      }
+   }
+   &__number {
+      position: relative;
+      font-family: 'BebasNeue', sans-serif;
+      display: block;
+      font-size: 48px;
+      line-height: 58px;
+      color: $main;
+      margin-bottom: 30px;
+      &::after {
+         position: absolute;
+         content: '';
+         width: 260px;
+         height: 1px;
+         background-color: $sep;
+         top: 25px;
+         right: 0;
+      }
+      @media (max-width: 1480px) {
+         &::after {
+            width: 200px;
+         }
+      }
+      @media (max-width: 992px) {
+         &::after {
+            width: 230px;
+         }
+      }
+      @media (max-width: 768px) {
+         margin-bottom: 10px;
+      }
+   }
+   &__item-title {
+      margin-bottom: 10px;
+   }
+   &__content {
+      @include content($txt2);
+      margin-bottom: 20px;
+      max-width: 300px;
+      @media (max-width: 768px) {
+         margin-bottom: 26px;
+      }
+   }
+   &__btn {
+      &::before {
+         position: absolute;
+         content: '';
+         width: 40px;
+         height: 1px;
+         background-color: $main;
+         left: 0;
+         top: 50%;
+      }
+   }
+   &__arrows-slider {
+      margin-top: 20px;
+      width: 100%;
+      display: none;
+      @media (max-width: 1200px) {
+         display: inline-flex;
+         align-items: center;
+         justify-content: right;
+      }
+   }
+   &__arrow {
+      &--next {
+         transform: rotate(180deg);
+      }
+   }
+}

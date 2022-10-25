@@ -1,0 +1,18 @@
+.link {
+   @include content($main);
+   position: relative;
+   padding-left: 60px;
+   font-weight: 600;
+   &::before {
+      position: absolute;
+      content: '';
+      width: 40px;
+      height: 1px;
+      background-color: $main;
+      top: 50%;
+      left: 0;
+   }
+   &:hover {
+      text-decoration: underline;
+   }
+}

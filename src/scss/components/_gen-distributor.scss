@@ -1,0 +1,60 @@
+.gen-distributor {
+   padding: 100px 0;
+   background: url(../img/picture/gen-distributor.png) bottom right / 960px 100% no-repeat;
+   background-color: $bg2;
+   margin-bottom: 150px;
+   @media (max-width: 1750px) {
+      background-size: 812px 572px;
+   }
+   @media (max-width: 1480px) {
+      background-size: 615px 435px;
+   }
+   @media (max-width: 1200px) {
+      padding-bottom: 275px;
+   }
+   @media (max-width: 992px) {
+      background-size: 524px 370px;
+   }
+   @media (max-width: 768px) {
+      margin-bottom: 100px;
+      padding: 50px 0px 345px 0px;
+   }
+   @media (max-width: 576px) {
+      background-size: 375px 264px;
+      padding-bottom: 315px;
+   }
+   &__body {
+      max-width: 720px;
+      @media (max-width: 1480px) {
+         max-width: 650px;
+      }
+   }
+   &__title {
+      margin-bottom: 20px;
+      @media (max-width: 768px) {
+         max-width: 345px;
+         margin-bottom: 10px;
+      }
+   }
+   &__content {
+      @include content($txt2);
+      margin-bottom: 30px;
+   }
+   &__btn {
+      margin-top: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 25px 60px;
+      @media (max-width: 576px) {
+         width: 100%;
+      }
+   }
+   &__icon-download {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+      color: inherit;
+      fill: currentColor;
+   }
+}

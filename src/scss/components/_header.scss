@@ -1,0 +1,238 @@
+.header {
+   border-bottom: 1px solid $stroke;
+   transition: background .2s ease;
+   &.no-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      a {
+         color: $white;
+      }
+      .burger__btn-line {
+         background-color: $white;
+      }
+   }
+   &__container {
+      max-width: 1890px;
+   }
+   &__body {
+      display: flex;
+      align-items: center;
+      width: 100%;
+   }
+   &__logo {
+      display: block;
+      padding: 23px 50px;
+      border-right: 1px solid $stroke;
+      @media (max-width: 1650px) {
+         padding: 16px 30px;
+      }
+      @media (max-width: 1240px) {
+         padding: 13px 16px;
+      }
+      @media (max-width: 992px) {
+         border-right: none;
+         margin: 0px 132px 0px auto;
+      }
+      @media (max-width: 576px) {
+         padding-right: 0;
+         padding-left: 0;
+         margin-right: 127px;
+      }
+   }
+   &__logo-img {
+      width: 140px;
+      height: 44px;
+      @media (max-width: 1540px) {
+         width: 120px;
+         height: 38px;
+      }
+   }
+   &__nav {
+      margin-left: 50px;
+      @media (max-width: 1650px) {
+         margin-left: 30px;
+      }
+      @media (max-width: 1380px) {
+         margin-left: 120px;
+      }
+      @media (max-width: 1240px) {
+         margin-left: 30px;
+      }
+      @media (max-width: 992px) {
+         display: none;
+      }
+   }
+   &__nav-list {
+      display: flex;
+      align-items: center;
+   }
+   &__nav-item {
+      position: relative;
+      padding: 34px 0;
+      &:not(:last-child) {
+         margin-right: 50px;
+      }
+      &::before {
+         position: absolute;
+         content: '';
+         height: 2px;
+         width: 100%;
+         bottom: -1px;
+         background-color: $main;
+         visibility: hidden;
+         opacity: 0;
+         transition: visibility .2s ease, opacity .2s ease;
+      }
+      &:hover {
+         &::before {
+            visibility: visible;
+            opacity: 1;
+         }
+      }
+      @media (max-width: 1750px) {
+         &:not(:last-child) {
+            margin-right: 30px;
+         }
+      }
+      @media (max-width: 1650px) {
+         padding: 28px 0;
+      }
+      @media (max-width: 1540px) {
+         padding: 26px 0px 27px 0px;
+      }
+      @media (max-width: 1240px) {
+         padding: 24px 0px 23px 0px;
+         &:not(:last-child) {
+            margin-right: 25px;
+         }
+      }
+   }
+   &__nav-btn {
+      line-height: 26px;
+      color: $txt;
+      transition: color .2s ease;
+      &:hover {
+         color: $main !important;
+      }
+      @media (max-width: 1540px) {
+         font-size: 14px;
+         line-height: normal;
+      }
+   }
+   &__tooltip-item {
+      margin-top: 35px;
+      @media (max-width: 1650px) {
+         margin-top: 29px;
+      }
+      @media (max-width: 1540px) {
+         margin-top: 28px;
+      }
+      @media (max-width: 1240px) {
+         margin-top: 25px;
+      }
+   }
+   &__tooltip-list {
+      max-width: 240px;
+      width: 1005px;
+   }
+   &__tooltip-list-item {
+      &:not(:first-child) {
+         margin-top: 15px;
+      }
+   }
+   &__tooltip-element {
+      font-size: 16px;
+      line-height: 26px;
+      color: $txt !important;
+      &:hover {
+         color: $main !important;
+         text-decoration: underline;
+      }
+   }
+   &__contacts-tel {
+      margin: 0px 350px 0px auto;
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      line-height: 26px;
+      color: $txt;
+      transition: color .2s ease, background-color .2s ease;
+      &:hover {
+         color: $main !important;
+      }
+      @media (max-width: 1750px) {
+         margin-right: 300px;
+      }
+      @media (max-width: 1650px) {
+         margin-right: 280px;
+      }
+      @media (max-width: 1540px) {
+         margin-right: 255px;
+         font-size: 14px;
+         line-height: normal;
+      }
+      @media (max-width: 1380px) {
+         margin-right: 0;
+      }
+      @media (max-width: 1240px) {
+         position: absolute;
+         top: 0;
+         right: 0;
+
+         justify-content: center;
+         width: 80px;
+         height: 69px;
+         background-color: $main;
+         &:hover {
+            background-color: $mainHover;
+            svg {
+               fill: $white;
+            }
+         }
+         span {
+            display: none;
+         }
+      }
+      @media (max-width: 576px) {
+         width: 80px;
+      }
+   }
+   &__contacts-icon {
+      width: 24px;
+      height: 24px;
+      fill: $main;
+      margin-right: 10px;
+      transition: fill .2s ease;
+      @media (max-width: 1240px) {
+         margin-right: 0;
+         fill: $white;
+      }
+   }
+   &__contacts-consultation {
+      @include flex-center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 300px;
+      height: 96px;
+      @media (max-width: 1750px) {
+         width: 270px;
+      }
+      @media (max-width: 1650px) {
+         width: 250px;
+         height: 83px;
+      }
+      @media (max-width: 1540px) {
+         width: 225px;
+         height: 76px;
+         font-size: 14px;
+         line-height: normal;
+      }
+      @media (max-width: 1380px) {
+         display: none;
+      }
+   }
+}

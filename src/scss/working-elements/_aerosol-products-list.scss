@@ -1,0 +1,31 @@
+.aerosol-products-list {
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   column-gap: 50px;
+   row-gap: 20px;
+   @media (max-width: 1480px) {
+      column-gap: 0;
+      justify-content: space-between;
+   }
+   @media (max-width: 768px) {
+      row-gap: 15px;
+   }
+   &__item {
+      display: flex;
+      align-items: center;
+      flex: 0 1 310px;
+      span {
+         @include content($txt2);
+      }
+      @media (max-width: 768px) {
+         flex-basis: 260px;
+      }
+   }
+   &__icon {
+      margin-right: 20px;
+      width: 30px;
+      height: 30px;
+      fill: $main;
+   }
+}

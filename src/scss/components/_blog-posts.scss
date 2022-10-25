@@ -1,0 +1,48 @@
+.blog-posts {
+   padding-bottom: 150px;
+   @media (max-width: 768px) {
+      padding-bottom: 100px;
+   }
+   &__body {
+      @include flex-between;
+      position: relative;
+      flex-wrap: wrap;
+      row-gap: 30px;
+      min-height: 400px;
+      @media (max-width: 768px) {
+         row-gap: 10px;
+      }
+   }
+   &__preloader {
+      display: none;
+   }
+   &__nav {
+      margin-top: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: right;
+   }
+   &__btn {
+      padding: 11px 19px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: transparent;
+
+      font-weight: 600;
+      line-height: 26px;
+      color: $txt;
+      transition: border-color .2s ease, color .2s ease;
+      &.active {
+         border-color: $main;
+         color: $main;
+      }
+      &:hover {
+         border-color: $main;
+         color: $main;
+      }
+      @media (max-width: 768px) {
+         font-size: 14px;
+         line-height: 22px;
+      }
+   }
+}

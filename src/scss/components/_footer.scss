@@ -1,0 +1,268 @@
+.footer {
+   &__header {
+      padding: 50px 0;
+      border-bottom: 1px solid $sep;
+      @media (max-width: 768px) {
+         padding-bottom: 30px;
+      }
+   }
+   &__header-body {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      @media (max-width: 1200px) {
+         row-gap: 20px;
+      }
+      @media (max-width: 576px) {
+         display: block;
+      }
+   }
+   &__logo {
+      display: block;
+      width: 200px;
+      height: 62px;
+      @media (max-width: 1480px) {
+         width: 160px;
+         height: 50px;
+      }
+   }
+   &__logo-img {
+      width: 100%;
+      height: 100%;
+   }
+   &__telephone-number {
+      display: block;
+      margin-left: 160px;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 51px;
+      color: $txt;
+      text-decoration: underline;
+      transition: color .2s ease;
+      &:hover {
+         color: $main;
+      }
+      @media (max-width: 1480px) {
+         font-size: 30px;
+         margin-left: 40px;
+      }
+      @media (max-width: 1200px) {
+         margin-left: auto;
+      }
+      @media (max-width: 768px) {
+         font-size: 28px;
+         line-height: 45px;
+      }
+      @media (max-width: 576px) {
+         margin: 30px 0px 0px 0px;
+      }
+   }
+   &__contacts-list {
+      display: flex;
+      align-items: center;
+      margin-left: 80px;
+      @media (max-width: 1480px) {
+         margin-left: 30px;
+      }
+      @media (max-width: 1200px) {
+         margin-left: 0;
+      }
+      @media (max-width: 768px) {
+         display: block;
+      }
+      @media (max-width: 576px) {
+         margin-top: 20px;
+      }
+   }
+   &__contacts-item {
+      @include content($txt);
+      display: flex;
+      align-items: center;
+      a {
+         transition: color .2s ease;
+      }
+      &:hover {
+         a {
+            color: $main;
+         }
+      }
+      &:not(:last-child) {
+         margin-right: 36px;
+      }
+      @media (max-width: 1480px) {
+         &:not(:last-child) {
+            margin-right: 25px;
+         }
+      }
+      @media (max-width: 768px) {
+         &:not(:last-child) {
+            margin: 0px 0px 20px 0px;
+         }
+      }
+   }
+   &__contacts-icon {
+      width: 24px;
+      height: 24px;
+      fill: $main;
+      margin-right: 10px;
+   }
+   &__soc-list {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      @media (max-width: 576px) {
+         margin: 20px 0px 0px 0px;
+      }
+   }
+   &__soc-item {
+      &:not(:last-child) {
+         margin-right: 15px;
+      }
+   }
+   &__soc-element {
+      display: block;
+      width: 24px;
+      height: 24px;
+   }
+   &__social-network-icon {
+      width: 100%;
+      height: 100%;
+      fill: $main;
+   }
+   &__body {
+      padding: 50px 0;
+      border-bottom: 1px solid $sep;
+      @media (max-width: 768px) {
+         padding: 30px 0px 20px 0px;
+      }
+   }
+   &__list {
+      display: flex;
+      row-gap: 30px;
+      @media (max-width: 1200px) {
+         flex-wrap: wrap;
+      }
+      @media (max-width: 576px) {
+         flex-direction: column;
+      }
+   }
+   &__item {
+      display: block;
+      flex: 0 1 25%;
+      &--big {
+         flex-basis: 50%;
+      }
+      @media (max-width: 1200px) {
+         flex-basis: 33% !important;
+      }
+      @media (max-width: 992px) {
+         flex-basis: 50% !important;
+         &:last-child {
+            display: flex;
+            justify-content: space-between;
+            .footer__element {
+               margin-bottom: 0;
+            }
+         }
+      }
+      @media (max-width: 576px) {
+         flex: 1 1 auto;
+         flex-direction: column;
+         row-gap: 30px;
+      }
+   }
+   &__element {
+      display: block;
+      width: max-content;
+      margin-bottom: 30px;
+      font-weight: 600;
+      line-height: 26px;
+      color: $txt;
+      transition: color .2s ease;
+      &:hover {
+         color: $main;
+      }
+      @media (max-width: 768px) {
+         font-size: 14px;
+         line-height: 22px;
+         margin-bottom: 20px;
+      }
+   }
+   &__sublist {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 130px;
+      row-gap: 15px;
+      padding-left: 20px;
+      @media (max-width: 1480px) {
+         column-gap: 80px;
+      }
+      @media (max-width: 768px) {
+         row-gap: 10px;  
+      }
+   }
+   &__subitem {
+      flex: 0 1 230px;
+   }
+   &__subelement {
+      @include content($txt2);
+      transition: color .2s ease;
+      &:hover {
+         color: $main;
+      }
+   }
+
+   &__bottom {
+      padding: 20px 0;
+   }
+   &__bottom-body {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      @media (max-width: 992px) {
+         justify-content: space-between;
+      }
+      @media (max-width: 576px) {
+         flex-direction: column;
+      }
+   }
+   &__bottom-content {
+      font-size: 12px;
+      line-height: 19px;
+      color: $txt2;
+      transition: color .2s ease;
+      &--right {
+         position: relative;
+         display: inline-flex;
+         width: max-content;
+         align-items: center;
+         padding-right: 62px;
+         margin-left: auto;
+         &::after {
+            position: absolute;
+            content: '';
+            width: 52px;
+            height: 11px;
+            right: 0;
+            background: url(../img/logos/ruso.svg) 0 0 / 100% 100% no-repeat;
+         }
+         @media (max-width: 992px) {
+            margin-left: 0;
+         }
+      }
+   }
+   &__bottom-link {
+      margin-left: 80px;
+      span {
+         text-decoration: underline;
+      }
+      &:hover {
+         span {
+            color: $main;
+         }
+      }
+      @media (max-width: 992px) {
+         margin-left: 0;
+      }
+   }
+}

@@ -1,0 +1,31 @@
+.blog-expert {
+   padding-bottom: 150px;
+   @media (max-width: 768px) {
+      padding-bottom: 100px;
+   }
+   &__title {
+      margin-bottom: 50px;
+      @media (max-width: 768px) {
+         margin-bottom: 30px;
+      }
+   }
+   &__card-blog {
+      &:not(:last-child) {
+         margin-right: 20px;
+      }
+   }
+   &__nav {
+      @include flex-between;
+      margin-top: 30px;
+      @media (max-width: 768px) {
+         margin-top: 20px;
+      }
+   }
+   &__arrows {
+      display: flex;
+      align-items: center;
+   }
+   &__arrow--next {
+      transform: rotate(180deg);
+   }
+}

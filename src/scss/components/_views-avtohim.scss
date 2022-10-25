@@ -1,0 +1,63 @@
+.views-avtohim {
+   padding-bottom: 150px;
+   @media (max-width: 768px) {
+      padding-bottom: 100px;
+   }
+   &__title {
+      margin-bottom: 20px;
+      @media (max-width: 768px) {
+         margin-bottom: 10px;
+      }
+   }
+   &__content {
+      @include content($txt2);
+      max-width: 840px;
+      margin-bottom: 50px;
+      @media (max-width: 768px) {
+         margin-bottom: 30px;
+      }
+   }
+   &__list {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 56px;
+      row-gap: 20px;
+      @media (max-width: 1200px) {
+         column-gap: 0;
+      }
+   }
+   &__item {
+      @include content($txt);
+      position: relative;
+      width: 305px;
+      padding-left: 36px;
+      &::before {
+         position: absolute;
+         content: '';
+         width: 16px;
+         height: 2px;
+         background-color: $main;
+         left: 0;
+         top: 12px;
+      }
+      @media (max-width: 1200px) {
+         width: 45%;
+         padding-right: 20px;
+      }
+      @media (max-width: 992px) {
+         width: 50%;
+      }
+      @media (max-width: 768px) {
+         padding-left: 34px;
+         &::before {
+            top: 10px;
+            width: 14px;
+         }
+      }
+      @media (max-width: 576px) {
+         width: 100%;
+         // flex-basis: auto;
+         // width: auto;
+      }
+   }
+}

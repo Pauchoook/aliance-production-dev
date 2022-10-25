@@ -1,0 +1,65 @@
+.aerosol-products {
+   padding-bottom: 150px;
+   @media (max-width: 768px) {
+      padding-bottom: 100px;
+   }
+   @media (max-width: 768px) {
+      padding-bottom: 100px;
+   }
+   &__body {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      @media (max-width: 1480px) {
+         row-gap: 30px;
+      }
+   }
+   &__block-content {
+      grid-column: 6 span;
+      &.logos {
+         display: grid;
+         grid-template-columns: repeat(6, 1fr);
+         border-top: 1px solid $sep;
+         border-left: 1px solid $sep;
+      }
+      @media (max-width: 1480px) {
+         grid-column: 12 span;
+      }
+   }
+   &__title {
+      margin-bottom: 40px;
+      @media (max-width: 768px) {
+         margin-bottom: 30px;
+      }
+   }
+   &__item-logo {
+      @include flex-center;
+      grid-column: 2 span;
+      padding: 45px 0;
+      border-right: 1px solid $sep;
+      border-bottom: 1px solid $sep;
+      &:hover {
+         .aerosol-products__logo {
+            filter: grayscale(0);
+         }
+      }
+      @media (max-width: 768px) {
+         padding: 30px 0;
+      }
+      @media (max-width: 576px) {
+         grid-column: 3 span;
+         &:last-child {
+            display: none;
+         }
+      }
+   }
+   &__logo {
+      width: 70px;
+      height: 70px;
+      filter: grayscale(100%); 
+      transition: filter .2s ease;
+      @media (max-width: 768px) {
+         width: 50px;
+         height: 50px;
+      }
+   }
+}

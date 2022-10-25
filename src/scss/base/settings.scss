@@ -1,0 +1,143 @@
+* {
+   box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+   // overflow: hidden;
+   font-family: 'NotoSans', sans-serif;
+   color: $txt;
+   font-size: 16px;
+}
+ul,li {
+    list-style: none;
+}
+a {
+   text-decoration: none;
+   transition: all 0.3s ease;
+   color: $txt;
+}
+h1, h2, h3, h4, h5, h6 {
+   font-weight: 400;
+}
+h1, h2 {
+   font-family: 'BebasNeue', sans-serif;
+   text-transform: uppercase;
+}
+h1 {
+   font-size: 80px;
+   line-height: 96px;
+   @media (max-width: 1200px) {
+      font-size: 68px;
+      line-height: normal;
+   }
+   @media (max-width: 992px) {
+      font-size: 54px;
+   }
+   @media (max-width: 768px) {
+      font-size: 48px;
+      line-height: 58px;
+   }
+}
+h2 {
+   font-size: 60px;
+   line-height: 72px;
+   @media (max-width: 1200px) {
+      font-size: 48px;
+      line-height: normal;
+   }
+   @media (max-width: 768px) {
+      font-size: 36px;
+      line-height: 43px;
+   }
+}
+h3 {
+   font-size: 36px;
+   line-height: 58px;
+   @media (max-width: 1200px) {
+      font-size: 32px;
+      line-height: none;
+   }
+   @media (max-width: 768px) {
+      font-size: 28px;
+      line-height: 36px;
+   }
+}
+h4 {
+   font-size: 28px;
+   line-height: 45px;
+   @media (max-width: 1200px) {
+      font-size: 24px;
+      line-height: normal;
+   }
+   @media (max-width: 768px) {
+      font-size: 20px;
+      line-height: 26px;
+   }
+}
+h4 {
+   font-size: 20px;
+   line-height: 32px;
+   @media (max-width: 768px) {
+      font-size: 18px;
+      line-height: 23px;
+   }
+}
+button {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    background: none;
+}
+input {
+    border: none;
+    outline: none;
+    background: none;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+input[type='search']::-webkit-search-decoration, 
+input[type='search']::-webkit-search-cancel-button, 
+input[type='search']::-webkit-search-results-button, 
+input[type='search']::-webkit-search-results-decoration {
+	display: none;
+}
+/* Firefox */
+input[type=number] {
+	-moz-appearance: textfield;
+}
+input[type="checkbox"] {
+    display: none;
+}
+textarea {
+    background: none;
+    resize: none;
+    outline: none;
+}
+input, select, textarea, button{font-family:inherit; color:inherit; font-size: inherit;}
+
+.container {
+   max-width: 1460px;
+   margin: 0 auto;
+   padding: 0 10px;
+   @media (max-width: 1480px) {
+      max-width: 1160px;
+   }
+   @media (max-width: 1200px) {
+      max-width: 980px;
+   }
+   @media (max-width: 992px) {
+      max-width: 740px;
+   }
+   @media (max-width: 768px) {
+      max-width: 560px;
+   }
+   @media (max-width: 576px) {
+      max-width: none;
+      padding: 0 15px;
+   }
+}

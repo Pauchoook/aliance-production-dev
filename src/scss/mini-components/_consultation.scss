@@ -1,0 +1,93 @@
+.consultation {
+   &__btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 300px;
+      height: 96px;
+      @media (max-width: 1750px) {
+         width: 270px;
+      }
+      @media (max-width: 1650px) {
+         width: 250px;
+         height: 83px;
+      }
+      @media (max-width: 1540px) {
+         width: 225px;
+         height: 76px;
+         font-size: 14px;
+         line-height: normal;
+      }
+      @media (max-width: 1380px) {
+         display: none;
+      }
+   }
+   &__popup-window {
+      max-width: 460px;
+      @media (max-width: 576px) {
+         max-width: calc(100% - 30px);
+      }
+   }
+   &__two {
+      display: none;
+   }
+   &__popup-title {
+      margin-bottom: 20px;
+      font-size: 48px;
+      line-height: 58px;
+      @media (max-width: 768px) {
+         font-size: 40px;
+         line-height: 48px;
+         margin-bottom: 10px;
+      }
+   }
+   &__popup-content {
+      @include content($txt2);
+   }
+   &__form {
+      margin-top: 30px;
+      @media (max-width: 768px) {
+         margin-top: 20px;
+      }
+   }
+   &__form-block {
+      width: 100%;
+      &:not(:first-child) {
+         margin-top: 30px;
+      }
+      @media (max-width: 768px) {
+         &:not(:first-child) {
+            margin-top: 20px;
+         }
+      }
+   }
+   &__form-input {
+      width: 100%;
+   }
+   &__form-btn {
+      width: 100%;
+      padding: 19px 0;
+      text-align: center;
+      margin-top: 30px;
+      @media (max-width: 768px) {
+         margin-top: 20px;
+      }
+   }
+   &__remark {
+      margin-top: 24px;
+      @media (max-width: 768px) {
+         margin-top: 18px;
+      }
+   }
+   &__form-content {
+      max-width: 275px;
+   }
+   &__img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 30px;
+      @media (max-width: 768px) {
+         margin-bottom: 20px;
+      }
+   }
+}

@@ -1,0 +1,103 @@
+.contract-production {
+   padding-bottom: 150px;
+   @media (max-width: 768px) {
+      padding-bottom: 100px;
+   }
+   &__title {
+      margin-bottom: 50px;
+      @media (max-width: 992px) {
+         margin-bottom: 30px;
+      }
+   }
+   &__body {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      border-top: 1px solid $sep;
+      border-left: 1px solid $sep;
+   }
+   &__item {
+      position: relative;
+      grid-column: 4 span;
+      min-height: 593px;
+      padding: 40px 50px;
+      border-right: 1px solid $sep;
+      border-bottom: 1px solid $sep;
+      background-size: 100% 300px !important;
+      &::before {
+         position: absolute;
+         content: '';
+         top: -1px;
+         right: -1px;
+         bottom: -1px;
+         left: -1px;
+         border: 1px solid transparent;
+         transition: border-color .2s ease;
+      }
+      &:hover {
+         &::before {
+            border-color: $main;
+         }
+         .contract-production__item-title {
+            color: $main;
+         }
+      }
+      @media (max-width: 1200px) {
+         padding: 20px 30px;
+         min-height: 520px;
+         background-size: 100% 250px !important;
+      }
+      @media (max-width: 992px) {
+         grid-column: 6 span;
+      }
+      @media (max-width: 768px) {
+         background-size: 100% 215px !important;
+         min-height: 430px;
+      }
+      @media (max-width: 576px) {
+         grid-column: 12 span;
+      }
+   }
+   &__item-title {
+      transition: color .2s ease;
+      margin-bottom: 10px;
+   }
+   &__item-content {
+      @include content($txt2);
+      max-width: 310px;
+   }
+
+   &__block-content {
+      margin-top: 100px;
+   }
+   &__content-title {
+      margin-bottom: 10px;
+      @media (max-width: 768px) {
+         margin-bottom: 15px;
+      }
+   }
+   &__content-text {
+      line-height: 26px;
+      color: $txt2;
+      margin-bottom: 20px;
+   }
+   &__contact-btn {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      line-height: 26px;
+      color: $main;
+      &:hover {
+         text-decoration: underline;
+      }
+      @media (max-width: 768px) {
+         font-size: 14px;
+         line-height: 22px;
+      }
+   }
+   &__icon-load {
+      width: 24px;
+      height: 24px;
+      fill: $main;
+      margin-right: 15px;
+   }
+}

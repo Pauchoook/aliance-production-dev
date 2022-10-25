@@ -1,0 +1,17 @@
+.politics {
+   padding-bottom: 150px;
+   @media (max-width: 768px) {
+      padding-bottom: 100px;
+   }
+   &__content {
+      @include content($txt);
+      &:not(:last-child) {
+         margin-bottom: 20px;
+      }
+      @media (max-width: 768px) {
+         &:not(:last-child) {
+            margin-bottom: 10px;
+         }
+      }
+   }
+}

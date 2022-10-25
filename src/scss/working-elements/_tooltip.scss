@@ -1,0 +1,18 @@
+.tooltip {
+   position: relative;
+   &__item {
+      position: absolute;
+      padding: 20px 30px;
+      background-color: #FAFBFC;
+      transform: translateY(30px);
+      opacity: 0;
+      visibility: hidden;
+      transition: transform .2s ease, opacity .2s ease, visibility .2s ease;
+      z-index: 100;
+      &.open {
+         transform: translateY(0);
+         opacity: 1;
+         visibility: visible;
+      }
+   }
+}

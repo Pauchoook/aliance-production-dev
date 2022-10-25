@@ -1,0 +1,100 @@
+.own-trademarks {
+   padding-bottom: 150px;
+   @media (max-width: 768px) {
+      padding-bottom: 100px;
+   }
+   &__title {
+      margin-bottom: 50px;
+      @media (max-width: 992px) {
+         margin-bottom: 30px;
+      }
+   }
+   &__body {
+      display: flex;
+      align-items: stretch;
+      flex-wrap: wrap;
+      border-top: 1px solid $sep;
+      border-left: 1px solid $sep;
+   }
+   &__item {
+      position: relative;
+      padding: 50px;
+      flex: 0 1 50%;
+      display: flex;
+      justify-content: space-between;
+      border-right: 1px solid $sep;
+      border-bottom: 1px solid $sep;
+      &::before {
+         position: absolute;
+         content: '';
+         top: -1px;
+         right: -1px;
+         bottom: -1px;
+         left: -1px;
+         border: 1px solid transparent;
+         transition: border-color .2s ease;
+      }
+      &:hover {
+         &::before {
+            border-color: $main;
+         }
+         svg {
+            fill: $main;
+         }
+         .own-trademarks__item-title {
+            color: $main;
+         }
+      }
+      @media (max-width: 1480px) {
+         padding: 40px;
+      }
+      @media (max-width: 1200px) {
+         flex-wrap: wrap;
+         row-gap: 20px;
+      }
+      @media (max-width: 992px) {
+         padding: 30px;
+      }
+      @media (max-width: 768px) {
+         flex: 1 1 auto;
+      }
+   }
+   &__icon {
+      width: 180px;
+      height: 180px;
+      fill: $txt2;
+      transition: fill .2s ease;
+      @media (max-width: 1480px) {
+         width: 150px;
+         height: 150px;
+      }
+      @media (max-width: 1200px) {
+         width: 130px;
+         height: 130px;
+      }
+      @media (max-width: 992px) {
+         width: 100px;
+         height: 100px;
+      }
+   }
+   &__item-right {
+      max-width: 360px;
+      @media (max-width: 1480px) {
+         max-width: 308px;
+      }
+      @media (max-width: 1200px) {
+         max-width: none;
+      }
+   }
+   &__item-title {
+      margin-bottom: 10px;
+      transition: color .2s ease;
+      @media (max-width: 576px) {
+         max-width: 155px;
+         word-wrap: normal;
+      }
+   }
+   &__content {
+      @include content($txt2);
+   }
+}

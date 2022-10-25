@@ -1,0 +1,62 @@
+.relationship {
+   padding: 50px 0px 150px 0px;
+   @media (max-width: 1750px) {
+      padding-top: 0;
+      background-size: 614px 482px !important;
+   }
+   @media (max-width: 1480px) {
+      background-size: 520px 428px !important;
+   }
+   @media (max-width: 1200px) {
+      padding-top: 245px;
+      background-size: 496px 389px !important;
+      background-position: top right !important;
+   }
+   @media (max-width: 992px) {
+      padding-top: 180px;
+      background-size: 400px 315px !important;
+   }
+   @media (max-width: 768px) {
+      padding: 170px 0px 100px 0px;
+      background-size: 327px 261px !important;
+   }
+   @media (max-width: 576px) {
+      padding-top: 345px;
+      background-size: 375px 295px !important;
+   }
+   &__body {
+      max-width: 720px;
+      margin-left: auto;   
+      @media (max-width: 1480px) {
+         max-width: 625px;
+      }
+      @media (max-width: 1200px) {
+         max-width: none;
+      }
+   }
+   &__title {
+      max-width: 370px;
+      margin-bottom: 20px;
+      @media (max-width: 1200px) {
+         max-width: 300px;
+      } 
+      @media (max-width: 768px) {
+         margin-bottom: 10px;
+         max-width: 220px;
+      }
+   }
+   &__content {
+      @include content($txt2);
+      &:not(:last-child) {
+         margin-bottom: 20px;
+      }
+      @media (max-width: 768px) {
+         &:not(:last-child) {
+            margin-bottom: 10px;
+         }
+      }
+   }
+   &__link {
+      margin-top: 30px;
+   }
+}

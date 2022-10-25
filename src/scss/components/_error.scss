@@ -1,0 +1,46 @@
+.error {
+   padding: 150px 0;
+   @media (max-width: 768px) {
+      padding: 100px 0;
+   }
+   &__title {
+      display: block;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 300px;
+      line-height: 300px;
+      color: $main;
+      text-align: center;
+      @media (max-width: 1200px) {
+         font-size: 250px;
+         line-height: 250px;
+      }
+      @media (max-width: 768px) {
+         font-size: 200px;
+         line-height: 200px;
+      }
+   }
+   &__block-content {
+      @include flex-center;
+      flex-direction: column;
+      max-width: 480px;
+      margin: 0 auto;
+      text-align: center;
+   }
+   &__subtitle {
+      margin-bottom: 20px;
+   }
+   &__content {
+      @include content($txt);
+      margin-bottom: 30px;
+      @media (max-width: 768px) {
+         margin-bottom: 50px;
+      }
+   }
+   &__btn {
+      padding: 24px 59px;
+      @media (max-width: 576px) {
+         padding: 19px 0px;
+         width: 100%;
+      }
+   }
+}

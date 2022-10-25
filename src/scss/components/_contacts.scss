@@ -1,0 +1,132 @@
+.contacts {
+   padding-bottom: 150px;
+   @media (max-width: 768px) {
+      padding-bottom: 100px;
+   }
+   &__header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 100px;
+      @media (max-width: 1480px) {
+         flex-wrap: wrap;
+         row-gap: 30px;
+      }
+      @media (max-width: 1200px) {
+         margin-bottom: 75px;
+      }
+      @media (max-width: 768px) {
+         margin-bottom: 50px;
+      }
+   }
+   &__tel {
+      font-weight: 600;
+      font-size: 48px;
+      line-height: 77px;
+      text-decoration: underline;
+      transition: color .2s ease;
+      &:hover {
+         color: $main;
+      }
+      @media (max-width: 1480px) {
+         font-size: 44px;
+         line-height: normal;
+      }
+      @media (max-width: 1200px) {
+         font-size: 40px;
+      }
+      @media (max-width: 992px) {
+         font-size: 36px;
+      }
+      @media (max-width: 768px) {
+         font-size: 32px;
+         line-height: 51px;
+      }
+   }
+   &__contacts-list {
+      margin-left: 65px;
+      display: flex;
+      align-items: center;
+      @media (max-width: 1480px) {
+         margin-left: 0px;
+         order: 3;
+      }
+      @media (max-width: 992px) {
+         width: 100%;
+         justify-content: space-between;
+      }
+      @media (max-width: 768px) {
+         row-gap: 30px;
+         order: 2;
+         flex-wrap: wrap;
+      }
+   }
+   &__contacts-item {
+      display: flex;
+      align-items: center;
+      font-size: 22px;
+      line-height: 35px;
+      a {
+         transition: color .2s ease;
+      }
+      span {
+         display: block;
+      }
+      &:hover {
+         a {
+            color: $main;
+         }
+      }
+      &:not(:last-child) {
+         margin-right: 45px;
+      }
+      @media (max-width: 992px) {
+         font-size: 20px;
+         line-height: 32px;
+         &:not(:last-child) {
+            margin-right: 0;
+         }
+      }
+   }
+   &__contacts-icon {
+      min-width: 36px;
+      min-height: 36px;
+      max-width: 36px;
+      max-height: 36px;
+      margin-right: 15px;
+      fill: $main;
+   }
+   &__soc-list {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      @media (max-width: 1480px) {
+         order: 2;
+      }
+      @media (max-width: 768px) {
+         margin-left: 0;
+         order: 3;
+      }
+   }
+   &__soc-item {
+      &:not(:last-child) {
+         margin-right: 15px;
+      }
+   }
+   &__soc-element {
+      display: block;
+      width: 36px;
+      height: 36px;
+   }
+   &__soc-icon {
+      width: 100%;
+      height: 100%;
+      fill: $main;
+   }
+   &__map {
+      width: 100%;
+      height: 600px;
+      @media (max-width: 768px) {
+         height: 500px;
+      }
+   }
+}

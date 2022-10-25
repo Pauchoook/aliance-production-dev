@@ -1,0 +1,76 @@
+.facts-slider {
+   overflow: visible;
+   border-top: 1px solid $stroke;
+   border-left: 1px solid $stroke;
+   border-bottom: 1px solid $stroke;
+   @media (max-width: 1200px) {
+      position: absolute;
+      overflow: hidden;
+      left: 0;
+      right: 0;
+   }
+   &__slide {
+      padding: 30px 50px;
+      flex: 0 0 20%;
+      border-right: 1px solid $stroke;
+      @media (max-width: 1480px) {
+         padding: 20px 30px;
+      }
+      @media (max-width: 1200px) {
+         flex-basis: 33%;
+      }
+      @media (max-width: 768px) {
+         flex-basis: 250px;
+      }
+   }
+   &__slide-icon {
+      width: 36px;
+      height: 36px;
+      fill: $main;
+   }
+   &__slide-content {
+      @include content($white);
+      display: block;
+      max-width: 179px;
+      margin-top: 20px;
+      &.black {
+         color: $txt;
+      }
+   }
+   &__arrows {
+      position: absolute;
+      border-top: 1px solid $stroke;
+      display: none;
+      left: 0;
+      right: 0;
+      @media (max-width: 768px) {
+         display: flex;
+         align-items: center;
+      }
+   }
+   &__slider-arrow {
+      @include flex-center;
+      padding: 10px 0;
+      flex: 0 50%;
+      &--next {
+         transform: rotate(180deg);
+      }
+      &:not(:last-child) {
+         border-right: 1px solid $stroke;
+      }
+      &:hover {
+         svg {
+            fill: $main;
+         }
+      }
+   }
+   &__icon-arrow {
+      width: 36px;
+      height: 24px;
+      fill: $white;
+      transition: fill .2s ease;
+      &.black {
+         fill: $txt;
+      }
+   }
+}

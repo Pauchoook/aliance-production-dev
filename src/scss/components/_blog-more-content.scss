@@ -1,0 +1,116 @@
+.blog-more-content {
+   padding-bottom: 150px;
+   @media (max-width: 768px) {
+      padding-bottom: 100px;
+   }
+   &__body {
+      display: flex;
+      @media (max-width: 1200px) {
+         flex-direction: column;
+      }
+   }
+   &__left {
+      top: 10px;
+      position: sticky;
+      flex: 0 1 480px;
+      height: fit-content;
+      @media (max-width: 1480px) {
+         flex-basis: 330px;
+      }
+      @media (max-width: 1200px) {
+         margin-top: 50px;
+         position: static;
+         order: 2;
+         flex-basis: auto;
+      }
+   }
+   &__right {
+      flex: 0 1 960px;
+      @media (max-width: 1200px) {
+         order: 1;
+         flex-basis: auto;
+      }
+   }
+   &__block-content {
+      &:not(:last-child) {
+         margin-bottom: 20px;
+      }
+   }
+   &__title-content {
+      margin-bottom: 20px;
+      @media (max-width: 768px) {
+         margin-bottom: 10px;
+      }
+   }
+   &__content {
+      @include content($txt);
+      &:not(:last-child) {
+         margin-bottom: 20px;
+      }
+      span {
+         font-weight: 600;
+      }
+      @media (max-width: 768px) {
+         &:not(:last-child) {
+            margin-bottom: 10px;
+         }
+      }
+   }
+   &__link-content {
+      color: $main;
+      text-decoration: underline;
+      transition: color .2s ease;
+      &:hover {
+         color: $mainHover;
+      }
+   }
+   &__img {
+      margin-top: 20px;
+      width: 100%;
+      height: auto;
+      max-height: 550px;
+      object-fit: cover;
+      @media (max-width: 768px) {
+         margin-top: 10px;
+      } 
+   }
+   &__list {
+      @media (max-width: 768px) {
+         margin-top: 20px;
+      } 
+   }
+   &__item {
+      @include content($txt);
+      position: relative;
+      padding-left: 30px;
+      &:not(:last-child) {
+         margin-bottom: 10px;
+      }
+      &::before {
+         position: absolute;
+         content: '';
+         left: 0;
+         top: 12px;
+         width: 15px;
+         height: 2px;
+         background-color: $main;
+      }
+      &--number {
+         padding-left: 36px;
+         &::before {
+            display: none;
+         }
+         .number {
+            @include content($main);
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-weight: 600;
+            @media (max-width: 768px) {
+               font-size: 14px;
+               line-height: 22px;
+            }
+         }
+      }
+   }
+}

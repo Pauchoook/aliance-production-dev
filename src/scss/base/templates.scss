@@ -1,0 +1,26 @@
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@mixin pseudo {
+    position: relative;
+    &::before, &::after {
+        content: "";
+        position: absolute;
+    }
+}
+
+@mixin content($color) {
+   line-height: 26px;
+   color: $color;
+   @media (max-width: 768px) {
+      font-size: 14px;
+      line-height: 22px;
+   }
+}

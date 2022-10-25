@@ -1,0 +1,17 @@
+.btn {
+   @include content($white);
+   display: inline-block;
+   font-weight: 600;
+   background-color: $main;
+   transition: color .2s ease, background-color .2s ease;
+   &.stroke {
+      border: 1px solid $main;
+   }
+   &:hover {
+      background-color: $mainHover;
+      &.stroke {
+         background: none;
+         color: $main;
+      }
+   }
+}
